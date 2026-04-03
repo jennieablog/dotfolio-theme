@@ -1,11 +1,8 @@
 title: Brainy Smurf
 description: Developer Portfolio and Notes
 
-author:
+hero:
   name: Brainy Smurf
-  nickname: Brainy
-  title: Web Developer
-  location: Smurf Village
-
-footer:
-  show_theme_link: true
+  title: Curious Engineer
+  location: Smurf Village of Innovation
+  bio: I specialize in crafting clever, maintainable, and playful web solutions using modern PHP, Python, and JavaScript frameworks. Currently, I’m focused on building smart, efficient, and scalable applications to make village life smoother for all my fellow Smurfs.
