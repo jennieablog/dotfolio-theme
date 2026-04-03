@@ -1,9 +1,5 @@
 plugins:
-  - jekyll-postcss
   - jekyll-paginate-v2
-
-postcss:
-  cache: false
 
 pagination:
   enabled: true
