@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  <body class="text-gray-800 bg-amber-50 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:text-neutral-200 dark:bg-gray-900 dark:bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] font-sans leading-relaxed">
     {% include nav.html %}
-    {{ content }}
+    <main class="max-w-prose mx-auto px-6">
+      {{ content }}
+    </main>
+    {% include footer.html %}
   </body>
 </html>

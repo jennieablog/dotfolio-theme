@@ -1,0 +1,16 @@
+<footer class="max-w-prose mx-auto px-6 py-7 flex justify-between text-gray-500">
+    <span style="font-small">
+        &copy; {{ "now" | date: "%Y" }} {{ site.author.name }}. 
+        Powered by 
+        <a href="https://jekyllrb.com" class="underline hover:text-gray-400">Jekyll</a> 
+        and <a href="https://jennieablog.github.io/dotfolio-theme" class="underline hover:text-gray-400">Dotfolio Theme</a>.
+        <!-- Dotfolio Theme link: please do not remove. This is part of the theme's licensing. -->
+    </span>
+    <span class="flex items-center space-x-3">
+        {% for social in site.data.social %}
+        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.name }}">
+            <img src="{{ social.icon | relative_url }}" alt="{{ social.name }} icon" class="h-5 w-5 opacity-75 dark:opacity-100">
+        </a>
+        {% endfor %}
+    </span>
+  </footer>

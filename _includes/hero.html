@@ -1,4 +1,29 @@
-<section>
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
+{% assign theme = site.data.theme %}
+<section class="py-16">
+  <div class="flex items-center gap-4 mb-4">
+    <img src="{{"/assets/images/profile.jpg" | relative_url }}" alt="{{ site.author.name | default:theme.author.name }}"
+      class="w-24 h-24 rounded-full object-cover border-2 border-lime-500 dark:border-lime-300" />
+    <div>
+      <h1 class="sm:text-2xl md:text-3xl text-lg font-semibold">Hello, I'm <span
+          class="text-blue-600 dark:text-blue-300">{{ site.author.nickname | default:theme.author.nickname }}</span>.</h1>
+      <p class="sm:text-lg md:text-xl text-lg">
+        A <span class="border-b-2 border-lime-500 dark:border-lime-300">{{ site.author.title | default:theme.author.title }}</span> 
+        based in {{ site.author.location | default:theme.author.location}}.
+      </p>
+    </div>
+  </div>
+
+  <p class="my-12 pl-4 border-l-2 border-lime-500 dark:border-lime-300 text-lg">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, libero ut. Rem repellendus voluptate error exercitationem tenetur libero. Explicabo sint hic consectetur, laudantium asperiores aliquid a, obcaecati aperiam aspernatur accusantium nostrum facilis exercitationem dolorem ducimus aliquam quod magnam odit placeat tempore officiis ad!
+  </p>
+
+  <div class="mt-10">
+    <a href="/about" class="inline-flex items-center text-blue-500 dark:text-blue-300">
+      About me
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+
 </section>

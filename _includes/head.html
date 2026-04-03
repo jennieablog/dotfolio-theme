@@ -1,0 +1,25 @@
+<head>
+  <title>{{ site.title | default:theme.title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="description"
+    content="{{ site.description | default:theme.description }}">
+
+  <link rel="shortcut icon" type="image/png" href="{{ "/assets/images/favicon.ico" | relative_url }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+
+  <!-- Theme Switcher -->
+  <script type="text/javascript" src="{{ "/assets/js/theme-switcher.js" | relative_url }}"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Syntax Highlighting -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+</head>
