@@ -1,9 +1,41 @@
-<section>
-  <h2>Projects</h2>
-  {% for project in site.data.projects %}
-    <div>
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.description }}</p>
-    </div>
-  {% endfor %}
+{% assign projects = site.projects | default: site.data.theme.projects | default: [] %}
+{% assign headings = site.headings | default: site.data.theme.headings | default: [] %}
+<section id="projects" class="py-16">
+
+  <h2 class="text-3xl font-semibold text-blue-600 dark:text-blue-300">{{ headings.projects.heading | default:headings.projects.heading }}</h2>
+  <p class="mb-8">{{ headings.projects.subheading | default:headings.projects.subheading }}</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {% for project in projects %}
+    <a href="https://{{ project.link }}" target="_blank" rel="noopener noreferrer"
+      class="block transition-transform duration-200 hover:scale-[1.02] h-full">
+      <div class="rounded-xl overflow-hidden cursor-pointer flex flex-col h-full">
+
+        <!-- Image Wrapper with Padding -->
+        <div class="p-4">
+          <img src="{{ project.image }}" alt="{{ project.title }}"
+            class="w-full h-48 object-cover rounded-md p-4 bg-lime-500/20 dark:bg-lime-300/20 shadow-md" />
+        </div>
+
+        <!-- Content -->
+        <div class="px-4 pb-4 mb-auto">
+          <h3 class="text-lg mb-2">{{ project.title }}</h3>
+          <p class="text-sm text-gray-400 dark:text-gray-500">{{ project.description }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <!-- Show More Button -->
+  <div class="mt-10">
+    <a href="{{ headings.projects.more.link }}" target="_blank"
+      class="inline-flex items-center text-blue-500 dark:text-blue-300">
+      {{ headings.projects.more.label | default:headings.projects.more.label }}
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+
 </section>

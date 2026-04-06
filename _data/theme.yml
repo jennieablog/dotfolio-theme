@@ -7,19 +7,18 @@ hero:
   location: Smurf Village of Innovation
   bio: I specialize in crafting clever, maintainable, and playful web solutions using modern PHP, Python, and JavaScript frameworks. Currently, I’m focused on building smart, efficient, and scalable applications to make village life smoother for all my fellow Smurfs.
 
-socials:
-  - name: GitHub
-    url: https://github.com/yourusername
-    icon: /assets/icons/github.svg
 
-  - name: Instagram
-    url: https://instagram.com/yourusername
-    icon: /assets/icons/instagram.svg
-    
-  - name: LinkedIn
-    url: https://linkedin.com/in/yourusername
-    icon: /assets/icons/linkedin.svg
-
+headings:
+  projects:
+    heading: Personal Projects
+    subheading: A mix of freelance work, voluntary efforts, and passion projects I've built lately.
+    more:
+      label: More on GitHub
+      link: https://github.com/username
+  posts:
+    heading: Recent Posts
+    subheading: Developer notes, bookmarks, and resources.
+  
 tools:
   - name: HTML5
     icon: /assets/icons/html5.svg
@@ -63,3 +62,34 @@ tools:
     icon: /assets/icons/vscode.svg
   - name: Jira
     icon: /assets/icons/jira.svg
+
+projects:
+  - title : C-Source
+    description: Supplier directory website with admin panel and blog functionality.
+    link: c-source.biz
+    image: assets/img/csource.png
+  - title : Unambiguous Cherry
+    description: Simple one-page theme for the latest version of my portfolio.
+    link: jennieablog.dev
+    show_repository: true
+  - title : Padyak Padayon
+    description: Virtual sports event platform with Strava API integration.
+    link: django-padyakpadayon-production.up.railway.app
+    image: assets/img/padyak.png
+  - title : Balasik Run
+    description: Event website for Balasik Run 2020.
+    link: balasikrun2020.netlify.app
+    image: assets/img/balasik.png
+
+socials:
+  - name: GitHub
+    url: https://github.com/yourusername
+    icon: /assets/icons/github.svg
+
+  - name: Instagram
+    url: https://instagram.com/yourusername
+    icon: /assets/icons/instagram.svg
+    
+  - name: LinkedIn
+    url: https://linkedin.com/in/yourusername
+    icon: /assets/icons/linkedin.svg
