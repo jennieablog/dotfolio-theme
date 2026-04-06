@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require "dotfolio-theme/installer"
+DotfolioTheme::Installer.install

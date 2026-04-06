@@ -1,9 +1,0 @@
-plugins:
-  - jekyll-paginate-v2
-
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: '/notes/:num/'
-  sort_field: 'date'
-  sort_reverse: true

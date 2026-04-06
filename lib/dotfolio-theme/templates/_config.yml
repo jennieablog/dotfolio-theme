@@ -86,3 +86,16 @@ socials:
   - name: LinkedIn
     url: https://linkedin.com/in/yourusername
     icon: /assets/icons/linkedin.svg
+
+theme: dotfolio-theme
+
+plugins:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/notes/:num/'
+  title: ':title - page :num'
+  sort_field: 'date'
+  sort_reverse: true

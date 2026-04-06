@@ -23,9 +23,14 @@ Gem::Specification.new do |spec|
     "assets/**/*",
     "_config.yml",
     "README*",
-    "LICENSE*"
+    "LICENSE*",
+    "lib/**/*",
+    "bin/*"
   ])
 
   spec.add_runtime_dependency "jekyll", ">= 4.0"
   spec.add_runtime_dependency "jekyll-paginate-v2"
+
+  spec.require_paths = ["lib"]
+  spec.executables << "dotfolio-theme"
 end
