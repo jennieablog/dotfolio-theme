@@ -1,8 +1,0 @@
-<section>
-  <input type="text" id="search" placeholder="Search notes">
-  <ul id="notes">
-    {% for note in site.data.notes %}
-      <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-    {% endfor %}
-  </ul>
-</section>

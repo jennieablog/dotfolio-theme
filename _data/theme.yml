@@ -5,19 +5,21 @@ hero:
   name: Brainy Smurf
   title: Curious Engineer
   location: Smurf Village of Innovation
-  bio: I specialize in crafting clever, maintainable, and playful web solutions using modern PHP, Python, and JavaScript frameworks. Currently, I’m focused on building smart, efficient, and scalable applications to make village life smoother for all my fellow Smurfs.
+  bio: I smurf in crafting the most clever, tidy, and delightfully smurfy solutions in all of Smurf Village. With my superior smurfing methods and impeccable smurf-logic, I ensure everything is organized, efficient, and properly smurfed to perfection.
 
 
 headings:
   projects:
-    heading: Personal Projects
-    subheading: A mix of freelance work, voluntary efforts, and passion projects I've built lately.
+    heading: Projects
+    subheading: A smurfy mix of freelance, volunteer, and passion smurfjects.
     more:
       label: More on GitHub
       link: https://github.com/username
   posts:
-    heading: Recent Posts
-    subheading: Developer notes, bookmarks, and resources.
+    heading: Recent Notes
+    subheading: Smurfy notes, bookmarks, and handy smurfources.
+    more:
+      label: Older notes
   
 tools:
   - name: HTML5
@@ -64,22 +66,14 @@ tools:
     icon: /assets/icons/jira.svg
 
 projects:
-  - title : C-Source
-    description: Supplier directory website with admin panel and blog functionality.
-    link: c-source.biz
-    image: assets/img/csource.png
-  - title : Unambiguous Cherry
-    description: Simple one-page theme for the latest version of my portfolio.
-    link: jennieablog.dev
-    show_repository: true
-  - title : Padyak Padayon
-    description: Virtual sports event platform with Strava API integration.
-    link: django-padyakpadayon-production.up.railway.app
-    image: assets/img/padyak.png
-  - title : Balasik Run
-    description: Event website for Balasik Run 2020.
-    link: balasikrun2020.netlify.app
-    image: assets/img/balasik.png
+  - title : Smurfboard
+    description: A smurfy app to keep track of all village tasks, from mushroom gardening to potion brewing.
+    link: #
+    image: assets/projects/project.png
+  - title : SmurfLib
+    description: A magical collection of scrolls, recipes, and Smurf lore, for every Smurf to learn and share.
+    link: #
+    image: assets/projects/project.png
 
 socials:
   - name: GitHub

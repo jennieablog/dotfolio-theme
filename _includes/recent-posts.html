@@ -1,0 +1,32 @@
+{% assign posts = site.posts | default: [] %}
+{% assign headings = site.headings | default: site.data.theme.headings | default: [] %}
+
+<!-- Recent Posts -->
+<section class="py-16">
+  <h2 class="text-3xl font-semibold text-blue-600 dark:text-blue-300">{{ headings.posts.heading | default:headings.posts.heading }}</h2>
+  <p class="mb-8">{{ headings.posts.subheading | default:headings.posts.subheading }}</p>
+
+  <ul class="space-y-8">
+    {% for post in posts limit:3 %}
+    <li class="pl-4 border-l-2 border-lime-500">
+      <h3 class="text-lg hover:underline">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
+      <p class="text-sm text-gray-400 dark:text-gray-500 mt-1">
+        {{ post.excerpt | strip_html | truncate: 160 }}
+      </p>
+      <small>{{ post.date | date: "%B %-d, %Y" }}</small>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Notes Button -->
+  <div class="mt-10">
+    <a href="/notes" class="inline-flex items-center text-blue-500 dark:text-blue-300">
+      {{ headings.posts.more.label | default:headings.posts.more.label }}
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+</section>
