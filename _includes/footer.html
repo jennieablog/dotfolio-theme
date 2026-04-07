@@ -1,17 +1,17 @@
 {% assign socials = site.socials | default: site.data.theme.socials | default: [] %}
-<footer class="max-w-prose mx-auto px-6 py-7 flex justify-between text-gray-500">
-    <span style="font-small">
+<footer>
+    <span class="copyright">
         &copy; {{ "now" | date: "%Y" }} {{ site.author.name | default: site.title }}. 
-        <span class="">Crafted with 
+        <span>Powered by 
             <!-- Dotfolio Theme Licensing. Please do not remove. -->
-            <a href="https://jennieablog.dev/dotfolio-theme" class="text-blue-600">Dotfolio</a>.
+            <a href="https://jennieablog.dev/dotfolio-theme" class="link">Dotfolio</a>.
             <!-- Dotfolio Theme Licensing. Please do not remove. -->
         </span>
     </span>
-    <span class="flex items-center space-x-3 p-2">
+    <span class="social-links">
         {% for social in socials %}
         <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.name }}">
-            <img src="{{ social.icon | relative_url }}" alt="{{ social.name }} icon" class="h-5 w-5 opacity-75 dark:opacity-100">
+            <img src="{{ social.icon | relative_url }}" alt="{{ social.name }} icon" class="social-icon">
         </a>
         {% endfor %}
     </span>

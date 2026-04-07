@@ -1,3 +1,378 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ----------------------------------------
+   Base Styles (global resets if needed)
+---------------------------------------- */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-gray-800 bg-amber-50 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:text-neutral-200 dark:bg-gray-900 dark:bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] antialiased;
+}
+
+  nav {
+    @apply max-w-prose mx-auto px-6 py-4 flex justify-between items-center;
+  }
+
+  main {
+    @apply max-w-prose mx-auto px-6 pt-16;
+  }
+
+  footer {
+    @apply max-w-prose mx-auto px-6 py-7 flex justify-between text-gray-500;
+  }
+
+  section {
+    @apply pb-16
+  }
+
+  article.post header {
+    @apply mb-16;
+  }
+
+  article.post content {
+    @apply max-w-none;
+  }
+
+  .back {
+    @apply mt-12;
+  }
+
+  .back .link {
+    @apply inline-flex items-center text-blue-600 dark:text-blue-300 hover:underline text-sm font-medium;
+  }
+}
+
+@layer components {
+  /* ----------------------------------------
+   Navigation
+  ---------------------------------------- */
+  nav .nav-logo {
+    @apply text-lg font-semibold text-amber-50 dark:text-gray-900 px-2 bg-blue-600 dark:bg-blue-300;
+  }
+
+  nav .nav-links {
+    @apply space-x-6 text-sm text-blue-500 dark:text-blue-300 flex items-center;
+  }
+
+  /* ----------------------------------------
+   Footer
+  ---------------------------------------- */
+  footer .copyright {
+    @apply my-auto;
+  }
+
+  footer .link {
+    @apply text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200;
+  }
+
+  footer .social-links {
+    @apply flex items-center space-x-3 p-2;
+  }
+
+  footer .social-icon {
+    @apply h-auto w-6 opacity-50 dark:opacity-70;
+  }
+
+  /* ----------------------------------------
+   Sections
+  ---------------------------------------- */
+  main.home .heading {
+    @apply text-3xl font-semibold text-blue-600 dark:text-blue-300 mb-2;
+  }
+
+  main.home .subheading {
+    @apply mb-8;
+  }
+
+  main.home .more {
+    @apply mt-10;
+  }
+
+  main.home .more a {
+    @apply inline-flex items-center text-blue-500 dark:text-blue-300;
+  }
+
+  main.home .more svg {
+    @apply w-5 h-5 ml-2;
+  }
+
+  /* ----------------------------------------
+   Hero Section
+  ---------------------------------------- */
+  .hero .nametag {
+    @apply flex items-center gap-4 mb-4;
+  }
+
+  .hero .nametag .nametag-avatar {
+    @apply w-24 h-24 rounded-full object-cover border-2 border-lime-500 dark:border-lime-300;
+  }
+
+  .hero .nametag .nametag-greeting {
+    @apply sm:text-2xl md:text-3xl text-lg font-semibold;
+  }
+
+  .hero .nametag .nametag-name {
+    @apply text-blue-600 dark:text-blue-300;
+  }
+
+  .hero .nametag .nametag-description {
+    @apply sm:text-lg md:text-xl text-lg;
+  }
+
+  .hero .nametag .nametag-title {
+    @apply border-b-2 border-lime-500 dark:border-lime-300;
+  }
+
+  .hero .bio {
+    @apply my-12 pl-4 border-l-2 border-lime-500 dark:border-lime-300 text-lg;
+  }
+
+  .hero .tools {
+    @apply mb-4 text-center uppercase text-xs font-medium;
+  }
+
+  .hero ul {
+    @apply flex flex-wrap justify-center;
+  }
+
+  .hero li {
+    @apply mx-2 md:mx-3 my-3;
+  }
+
+  .hero li div {
+    @apply flex justify-center cursor-pointer;
+  }
+
+  .hero li p {
+    @apply pt-2 text-xs text-center;
+  }
+
+  .hero li .icon {
+    @apply w-10 h-auto opacity-65 dark:opacity-95;
+  }
+
+  /* ----------------------------------------
+   Projects
+  ---------------------------------------- */
+  .projects .project-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .projects .clickable-area {
+    @apply block transition-transform duration-200 hover:scale-[1.02] h-full;
+  }
+
+  .projects .card {
+    @apply rounded-xl overflow-hidden cursor-pointer flex flex-col h-full;
+  }
+
+  .projects .image-container {
+    @apply p-4;
+  }
+
+  .projects .image-container img {
+    @apply w-full h-48 object-cover rounded-md p-4 bg-lime-500/20 dark:bg-lime-300/20 shadow-md;
+  }
+
+  .projects .content-container {
+    @apply px-4 pb-4 mb-auto;
+  }
+
+  .projects .content-container .title {
+    @apply text-lg mb-2;
+  }
+
+  .projects .content-container .description {
+    @apply text-sm text-gray-400 dark:text-gray-500;
+  }
+
+  /* ----------------------------------------
+   Posts
+  ---------------------------------------- */
+  .posts ul {
+    @apply space-y-8;
+  }
+
+  .posts li {
+    @apply pl-4 border-l-2 border-lime-500;
+  }
+
+  .posts .title {
+    @apply text-lg hover:underline;
+  }
+
+  .posts .excerpt {
+    @apply text-sm text-gray-400 dark:text-gray-500 mt-1;
+  }
+
+  /* ----------------------------------------
+   Page
+  ---------------------------------------- */
+  .content {
+    @apply max-w-3xl mx-auto;
+  }
+
+  /* Headings */
+  .content h1 {
+    @apply text-3xl font-bold leading-tight mb-4;
+  }
+
+  .content h2 {
+    @apply text-2xl font-semibold mb-3;
+  }
+
+  .content h3 {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  .content h4 {
+    @apply text-lg font-semibold mb-2;
+  }
+
+  .content h5 {
+    @apply text-base font-semibold mb-1;
+  }
+
+  .content h6 {
+    @apply text-sm font-semibold mb-1 text-gray-500;
+  }
+
+  /* Paragraphs */
+  .content p {
+    @apply leading-relaxed mb-4;
+  }
+
+  /* Links */
+  .content a {
+    @apply text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200;
+  }
+
+  /* Lists */
+  .content ul {
+    @apply list-disc pl-6 mb-4;
+  }
+
+  .content ol {
+    @apply list-decimal pl-6 mb-4;
+  }
+
+  .content li {
+    @apply mb-1;
+  }
+
+  /* Blockquote */
+  .content blockquote {
+    @apply border-l-2 border-lime-500 dark:border-lime-300 pl-4 italic text-gray-600 dark:text-gray-400 my-4;
+  }
+
+  /* Code */
+  .content code.highlighter-rouge {
+    @apply bg-blue-950 text-lime-300 px-1 py-0.5 rounded text-sm;
+  }
+
+  .content pre {
+    @apply bg-blue-950 text-lime-500 p-4 rounded-lg overflow-x-auto my-4;
+  }
+
+  .content pre code {
+    @apply bg-transparent p-0 text-sm;
+  }
+
+  /* Horizontal Rule */
+  .content hr {
+    @apply my-8 border-gray-300;
+  }
+
+  /* Images */
+  .content img {
+    @apply rounded-lg my-4;
+  }
+
+  /* Tables */
+  .content table {
+    @apply w-full border-collapse my-6 text-sm;
+  }
+
+  .content th {
+    @apply border-b-2 border-gray-300 text-left p-2 font-semibold;
+  }
+
+  .content td {
+    @apply border-b border-gray-200 p-2;
+  }
+
+  /* Inline elements */
+  .content strong {
+    @apply font-semibold;
+  }
+
+  .content em {
+    @apply italic;
+  }
+
+  .content del {
+    @apply line-through;
+  }
+
+  /* Small / misc */
+  .content small {
+    @apply text-sm text-gray-500;
+  }
+
+  .content mark {
+    @apply bg-yellow-200 px-1;
+  }
+
+  /* ----------------------------------------
+   Notes Index
+  ---------------------------------------- */
+  .notes-index .heading {
+    @apply text-3xl font-semibold text-blue-600 dark:text-blue-300 border-b-2 border-lime-500 dark:border-lime-300 inline-flex mb-2;
+  }
+
+  .notes-index .subheading {
+    @apply mb-5;
+  }
+
+  .notes-index .search-input {
+    @apply text-gray-800 p-2 border-2 rounded w-full mb-8;
+  }
+
+  .notes-index .search-results {
+    @apply space-y-8 hidden;
+  }
+
+  .notes-index .paginated-posts {
+    @apply space-y-8;
+  }
+
+  .notes-index .paginated-posts li {
+    @apply mb-5;
+  }
+
+  .notes-index .paginated-posts h3 {
+    @apply text-lg hover:underline;
+  }
+
+  .notes-index .paginated-posts p {
+    @apply text-sm font-light mt-1 text-gray-400 dark:text-gray-500;
+  }
+
+  .notes-index .pagination {
+    @apply mt-5 max-w-prose mx-auto flex justify-between;
+  }
+
+  .notes-index .pagination a {
+    @apply text-blue-500 dark:text-blue-300 mt-10;
+  }
+}
+
+::selection {
+  background: rgb(65, 187, 73);
+color: white;
+}

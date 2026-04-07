@@ -1,19 +1,32 @@
 {% assign hero = site.hero | default: site.data.theme.hero | default: [] %}
-<section>
-  <div class="flex items-center gap-4 mb-4">
+{% assign tools = site.tools | default: site.data.theme.tools | default: [] %}
+<section class="hero">
+  <div class="nametag">
     <img src="{{"/assets/images/profile.jpg" | relative_url }}" alt="{{ hero.name }}"
-      class="w-24 h-24 rounded-full object-cover border-2 border-lime-500 dark:border-lime-300" />
+      class="nametag-avatar" />
     <div>
-      <h1 class="sm:text-2xl md:text-3xl text-lg font-semibold">Hello, I'm <span
-          class="text-blue-600 dark:text-blue-300">{{ hero.name }}</span>.</h1>
-      <p class="sm:text-lg md:text-xl text-lg">
-        A <span class="border-b-2 border-lime-500 dark:border-lime-300">{{ hero.title }}</span> 
+      <h1 class="nametag-greeting">Hello, I'm <span
+          class="nametag-name">{{ hero.name }}</span>.</h1>
+      <p class="nametag-description">
+        A <span class="nametag-jobtitle">{{ hero.title }}</span> 
         based in {{ hero.location }}.
       </p>
     </div>
   </div>
 
-  <p class="my-12 pl-4 border-l-2 border-lime-500 dark:border-lime-300 text-lg">
+  <p class="bio">
     {{ hero.bio }}
   </p>
+
+  <p class="tools">Tech Stack & Tools</p>
+  <ul>
+    {% for tool in tools %}
+    <li>
+      <div>
+        <img src="{{ tool.icon | relative_url }}" alt="{{ tool.name }} icon" class="icon">
+      </div>
+      <p>{{ tool.name }}</p>
+    </li>
+    {% endfor %}
+  </ul>
 </section>

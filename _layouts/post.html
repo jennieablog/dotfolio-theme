@@ -1,24 +1,23 @@
 ---
-layout: default
+layout: page
 ---
-
-<article class="py-16">
+<article class="post">
   <!-- Post Header -->
-  <header class="mb-8">
-    <h1 class="text-3xl font-bold leading-tight">{{ page.title }}</h1>
-    <p class="mt-2 text-sm">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+  <header>
+    <h1>{{ page.title }}</h1>
+    <h6>Published on {{ page.date | date: "%B %d, %Y" }}</h6>
   </header>
 
   <!-- Post Content -->
-  <div class="prose prose-sm sm:prose-base max-w-none dark:prose-invert">
+  <div class="post-content">
     {{ content }}
   </div>
-
-  <!-- Back to Index Link -->
-  <div class="mt-12">
-    <a href="/notes"
-      class="inline-flex items-center text-blue-600 dark:text-blue-300 hover:underline text-sm font-medium">
-      ← Back to index
-    </a>
-  </div>
 </article>
+
+<!-- Back to Index Link -->
+<div class="back">
+  <a href="/notes"
+    class="link">
+    ← Back to index
+  </a>
+</div>

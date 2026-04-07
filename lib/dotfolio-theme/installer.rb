@@ -20,6 +20,23 @@ module DotfolioTheme
         FileUtils.cp(src_file, dest_file)
         puts "#{filename} installed!"
       end
+
+      # Create notes directory
+      notes_dir = File.join(Dir.pwd, "notes")
+      FileUtils.mkdir_p(notes_dir)
+
+      # Copy index.html into notes/
+      src_index = File.join(TEMPLATE_DIR, "notes-index.html")
+      dest_index = File.join(notes_dir, "index.html")
+
+      if File.exist?(dest_index)
+        print "Warning: notes/index.html already exists. Overwrite? (Y/N): "
+        answer = $stdin.gets.chomp.strip.downcase
+        return unless answer == "y"
+      end
+
+      FileUtils.cp(src_index, dest_index)
+      puts "notes/index.html installed!"
     end
   end
 end

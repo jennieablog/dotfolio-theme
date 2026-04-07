@@ -1,0 +1,85 @@
+---
+layout: search
+title: "Notes"
+pagination:
+  enabled: true
+---
+<section class="notes-index">
+  <div class="heading">Notes</div>
+  <p class="subheading">Developer notes, bookmarks, and resources.</p>
+
+  <input type="text" id="search-input" class="search-input" placeholder="Search notes..." />
+
+  <ul id="search-results" class="search-results"></ul>
+  <ul id="paginated-posts" class="paginated-posts">
+    {% for post in paginator.posts %}
+      <li>
+        <h3>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p>
+          {{ post.excerpt | strip_html | truncate: 160 }}
+        </p>
+        <small>{{ post.date | date: "%B %-d, %Y" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer notes</a>
+  {% endif %}
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | relative_url }}">Older notes &rarr;</a>
+  {% endif %}
+  </div>
+  <script>
+    const input = document.getElementById('search-input');
+    const resultsList = document.getElementById('search-results');
+    const paginatedList = document.getElementById('paginated-posts');
+
+    let posts = [];
+
+    fetch('{{ "/search.json" | relative_url }}')
+      .then(res => res.json())
+      .then(data => posts = data);
+
+    input.addEventListener('input', () => {
+      const query = input.value.toLowerCase().trim();
+
+      if (query.length === 0) {
+        resultsList.classList.add('hidden');
+        paginatedList.classList.remove('hidden');
+        return;
+      }
+
+      const filtered = posts.filter(post => 
+        post.title.toLowerCase().includes(query) ||
+        post.excerpt.toLowerCase().includes(query)
+      );
+
+      resultsList.innerHTML = '';
+
+      if (filtered.length === 0) {
+        resultsList.innerHTML = '<li class="text-gray-500 mb-5">No results found.</li>';
+      } else {
+        filtered.forEach(post => {
+          const li = document.createElement('li');
+          li.setAttribute('class','mb-5');
+          li.innerHTML = `
+            <h3 class="text-lg hover:underline">
+              <a href="${post.url}">${post.title}</a>
+            </h3>
+            <p class="text-sm font-light mt-1 text-gray-400 dark:text-gray-500">
+              ${post.excerpt.substring(0, 160)}
+            </p>
+            <small>${post.date}</small>
+          `;
+          resultsList.appendChild(li);
+        });
+      }
+
+      resultsList.classList.remove('hidden');
+      paginatedList.classList.add('hidden');
+    });
+  </script>
+</section>
