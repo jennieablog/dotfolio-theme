@@ -1,48 +1,75 @@
 ---
 layout: page
-title: About This Theme
+title: About Dotfolio
 permalink: /about/
 ---
 
-## 🎨 About This Theme
+# 📘 Dotfolio
 
-This site is powered by a custom **Jekyll theme** designed for simplicity, readability, and flexibility.
-
-It’s built with a focus on:
-- Clean typography
-- Fast performance
-- Easy customization
-- Minimal dependencies
+> A calm, dotted notebook-style Jekyll theme with a minimal, structured layout for showcasing projects and documenting ideas.
 
 ---
 
-## ⚙️ Features
 
-- 📱 Fully responsive design  
-- 🌙 Dark mode support  
-- 🧩 Modular layouts and includes  
-- 📝 Blog-ready post templates  
-- 🔍 SEO-friendly structure  
-- 🚀 Fast static builds  
+## ✨ Features
 
----
-
-## 🧱 Built With
-
-- **Jekyll** for static site generation  
-- **Liquid** templating engine  
-- **Markdown** for content  
-- Tailwind CSS
+- 🧭 Simple, focused homepage layout  
+- 📝 Notes system with **pagination + search**  
+- 🗂 Centralized configuration via a single YAML file  
+- ✍️ Consistent styling across Markdown and HTML  
+- 🌗 Dark mode / light mode toggle  
+- ⚡ Installer script for quick setup  
+- 📦 Fully static (no runtime dependencies)  
+- 🪶 Lightweight and fast  
+- 🔓 Open source  
 
 ---
 
-## 📂 Theme Structure
+## 📄 Pages
 
-```text
-.
-├── _layouts/      # Page templates
-├── _includes/     # Reusable components
-├── _posts/        # Blog posts
-├── _data/         # YAML data files
-├── assets/        # CSS, JS, images
-└── _config.yml    # Site configuration
+### 🏠 Home
+- Hero section (name tag + short intro)  
+- Tech stack overview  
+- Recent projects (with GitHub profile link)  
+- Recent notes  
+
+### 📝 Notes
+- Paginated index  
+- Built-in search (non-paginated results)  
+
+### 👤 About
+- Dedicated page to introduce yourself  
+
+---
+
+## 🎯 Use Cases
+
+Dotfolio is ideal for:
+
+- Developer portfolios
+- Project showcases
+- Personal blogs
+- Digital gardens / notes
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to:
+- [Open an issue](https://github.com/jennieablog/dotfolio-theme/contribute)
+- [Submit a pull request](https://github.com/jennieablog/dotfolio-theme/pulls)
+
+---
+
+## 📄 License
+
+MIT License © Jennie Ron Ablog
+
+---
+
+## 💡 Acknowledgements
+
+- Built with ❤️ using [Jekyll](https://jekyllrb.com).
+- Styled using [Tailwind CSS](https://tailwindcss.com) during development, then compiled into a standalone stylesheet for production.
