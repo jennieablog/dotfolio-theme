@@ -1,5 +1,5 @@
-title: Brainy Smurf
-description: Developer Portfolio and Notes
+title: Dotfolio
+description: A dotted notebook-style Jekyll theme for minimal and structured developer portfolios.
 
 hero:
   name: Brainy Smurf
@@ -67,11 +67,11 @@ tools:
 projects:
   - title : Smurfboard
     description: A smurfy app to keep track of all village tasks, from mushroom gardening to potion brewing.
-    link: #
+    link: https://example.com
     image: assets/projects/project.png
   - title : SmurfLib
     description: A magical collection of scrolls, recipes, and Smurf lore, for every Smurf to learn and share.
-    link: #
+    link: https://example.com
     image: assets/projects/project.png
 
 socials:
