@@ -7,12 +7,12 @@ Gem::Specification.new do |spec|
   spec.email         = ["hello@jennieablog.dev"]
 
   spec.metadata["jekyll-theme"] = "true"
-  spec.metadata["homepage_uri"] = "https://example.com/dotfolio-theme"
-  spec.metadata["source_code_uri"] = "https://example.com/dotfolio-theme"
+  spec.metadata["homepage_uri"] = "https://github.com/jennieablog/dotfolio-theme"
+  spec.metadata["source_code_uri"] = "https://github.com/jennieablog/dotfolio-theme"
 
-  spec.summary       = "A dot grid notepad Jekyll theme for developer portfolios and notes"
-  spec.description   = "Dotfolio is a Tailwind-powered Jekyll theme with a blue & green dotted notebook style, perfect for developer portfolios, projects, and notes."
-  spec.homepage      = "https://example.com/dotfolio-theme"
+  spec.summary       = "A dotted notebook-style Jekyll theme for minimal and structured developer portfolios."
+  spec.description   = "Dotfolio is a calm, dotted notebook-style Jekyll theme with a minimal, structured layout for showcasing projects and documenting ideas."
+  spec.homepage      = "https://github.com/jennieablog/dotfolio-theme"
   spec.license       = "MIT"
 
   spec.files = Dir.glob([
