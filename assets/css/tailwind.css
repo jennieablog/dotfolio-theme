@@ -8,22 +8,23 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    font-family: "Source Sans 3", sans-serif;
   }
 
   body {
     @apply text-gray-800 bg-amber-50 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:text-neutral-200 dark:bg-gray-900 dark:bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] antialiased;
-}
+  }
 
   nav {
-    @apply max-w-prose mx-auto px-6 py-4 flex justify-between items-center;
+    @apply max-w-[75ch] mx-auto px-6 py-8 flex justify-between items-center;
   }
 
   main {
-    @apply max-w-prose mx-auto px-6 pt-16;
+    @apply max-w-[75ch] mx-auto px-6 pt-16;
   }
 
   footer {
-    @apply max-w-prose mx-auto px-6 py-7 flex justify-between text-gray-500;
+    @apply max-w-[75ch] mx-auto px-6 py-7 flex justify-between text-gray-500;
   }
 
   section {
@@ -57,6 +58,34 @@
 
   nav .nav-links {
     @apply space-x-6 text-sm text-blue-500 dark:text-blue-300 flex items-center;
+  }
+
+  nav .theme-switcher {
+    @apply flex items-center;
+  }
+
+  nav .theme-switcher .sun {
+    @apply hidden dark:inline-flex;
+  }
+
+  nav .theme-switcher .sun svg {
+    @apply w-6 h-6;
+  }
+
+  nav .theme-switcher .sun path {
+    @apply dark:stroke-blue-300;
+  }
+
+  nav .theme-switcher .moon {
+    @apply inline-flex dark:hidden;
+  }
+
+  nav .theme-switcher .moon svg {
+    @apply w-5 h-5;
+  }
+
+  nav .theme-switcher .moon path {
+    @apply fill-blue-500;
   }
 
   /* ----------------------------------------
@@ -344,27 +373,31 @@
   }
 
   .notes-index .search-results {
-    @apply space-y-8 hidden;
+    @apply space-y-8;
   }
 
   .notes-index .paginated-posts {
     @apply space-y-8;
   }
 
-  .notes-index .paginated-posts li {
+  .notes-index li {
     @apply mb-5;
   }
 
-  .notes-index .paginated-posts h3 {
+  .notes-index li.no-results {
+    @apply mb-5 ;
+  }
+
+  .notes-index h3 {
     @apply text-lg hover:underline;
   }
 
-  .notes-index .paginated-posts p {
-    @apply text-sm font-light mt-1 text-gray-400 dark:text-gray-500;
+  .notes-index p {
+    @apply text-sm mt-1 text-gray-400 dark:text-gray-500;
   }
 
   .notes-index .pagination {
-    @apply mt-5 max-w-prose mx-auto flex justify-between;
+    @apply mt-5 max-w-[75ch] mx-auto flex justify-between;
   }
 
   .notes-index .pagination a {
@@ -374,5 +407,5 @@
 
 ::selection {
   background: rgb(65, 187, 73);
-color: white;
+  color: white;
 }
