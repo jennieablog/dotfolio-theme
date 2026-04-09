@@ -1,15 +1,48 @@
 ---
 layout: page
-title: About
+title: About This Theme
 permalink: /about/
 ---
 
-# Welcome to Dotfolio!
+## 🎨 About This Theme
 
-This is the Dotfolio theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/).
+This site is powered by a custom **Jekyll theme** designed for simplicity, readability, and flexibility.
 
-You can find the source code for Dotfolio at GitHub:
-[jennieablog](https://github.com/jennieablog) /
-[dotfolio-theme](https://github.com/jennieablog/dotfolio-theme).
+It’s built with a focus on:
+- Clean typography
+- Fast performance
+- Easy customization
+- Minimal dependencies
 
-Thanks for your support!
+---
+
+## ⚙️ Features
+
+- 📱 Fully responsive design  
+- 🌙 Dark mode support  
+- 🧩 Modular layouts and includes  
+- 📝 Blog-ready post templates  
+- 🔍 SEO-friendly structure  
+- 🚀 Fast static builds  
+
+---
+
+## 🧱 Built With
+
+- **Jekyll** for static site generation  
+- **Liquid** templating engine  
+- **Markdown** for content  
+- Tailwind CSS
+
+---
+
+## 📂 Theme Structure
+
+```text
+.
+├── _layouts/      # Page templates
+├── _includes/     # Reusable components
+├── _posts/        # Blog posts
+├── _data/         # YAML data files
+├── assets/        # CSS, JS, images
+└── _config.yml    # Site configuration
