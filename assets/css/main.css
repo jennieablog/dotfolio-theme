@@ -565,8 +565,6 @@ body {
   background-image: radial-gradient(#e5e7eb 1px,transparent 1px);
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity, 1));
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-size: 16px 16px;
 }
 
@@ -582,7 +580,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 75ch;
+  max-width: 80ch;
   align-items: center;
   justify-content: space-between;
   padding-left: 1.5rem;
@@ -594,7 +592,7 @@ nav {
 main {
   margin-left: auto;
   margin-right: auto;
-  max-width: 75ch;
+  max-width: 80ch;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 4rem;
@@ -604,7 +602,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 75ch;
+  max-width: 80ch;
   justify-content: space-between;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1073,32 +1071,32 @@ main.home .more svg {
 }
 
 /* ----------------------------------------
-   Posts
+   Notes / Posts
   ---------------------------------------- */
 
-.posts ul > :not([hidden]) ~ :not([hidden]) {
+.notes ul > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
-.posts li {
+.notes li {
   border-left-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(132 204 22 / var(--tw-border-opacity, 1));
   padding-left: 1rem;
 }
 
-.posts .title {
+.notes .title {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.posts .title:hover {
+.notes .title:hover {
   text-decoration-line: underline;
 }
 
-.posts .excerpt {
+.notes .excerpt {
   margin-top: 0.25rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1106,7 +1104,7 @@ main.home .more svg {
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
-.posts .excerpt:is(.dark *) {
+.notes .excerpt:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
@@ -1449,18 +1447,10 @@ main.home .more svg {
   display: contents;
 }
 
-.hidden {
-  display: none;
-}
-
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /* ----------------------------------------

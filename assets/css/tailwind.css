@@ -12,19 +12,19 @@
   }
 
   body {
-    @apply text-gray-800 bg-amber-50 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:text-neutral-200 dark:bg-gray-900 dark:bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] antialiased;
+    @apply text-gray-800 bg-amber-50 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:text-neutral-200 dark:bg-gray-900 dark:bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px];
   }
 
   nav {
-    @apply max-w-[75ch] mx-auto px-6 py-8 flex justify-between items-center;
+    @apply max-w-[80ch] mx-auto px-6 py-8 flex justify-between items-center;
   }
 
   main {
-    @apply max-w-[75ch] mx-auto px-6 pt-16;
+    @apply max-w-[80ch] mx-auto px-6 pt-16;
   }
 
   footer {
-    @apply max-w-[75ch] mx-auto px-6 py-7 flex justify-between text-gray-500;
+    @apply max-w-[80ch] mx-auto px-6 py-7 flex justify-between text-gray-500;
   }
 
   section {
@@ -221,21 +221,21 @@
   }
 
   /* ----------------------------------------
-   Posts
+   Notes / Posts
   ---------------------------------------- */
-  .posts ul {
+  .notes ul {
     @apply space-y-8;
   }
 
-  .posts li {
+  .notes li {
     @apply pl-4 border-l-2 border-lime-500;
   }
 
-  .posts .title {
+  .notes .title {
     @apply text-lg hover:underline;
   }
 
-  .posts .excerpt {
+  .notes .excerpt {
     @apply text-sm text-gray-400 dark:text-gray-500 mt-1;
   }
 

@@ -4,9 +4,10 @@ title: "Notes"
 pagination:
   enabled: true
 ---
+{% assign headings = site.headings | default: site.data.theme.headings | default: '' %}
 <section class="notes-index">
-  <div class="heading">Notes</div>
-  <p class="subheading">Developer notes, bookmarks, and resources.</p>
+  <h1 class="heading">{{ headings.notes.heading | default:headings.notes.heading }}</h1>
+  <p class="subheading">{{ headings.notes.subheading | default:headings.notes.subheading }}</p>
 
   <input type="text" id="search-input" class="search-input" placeholder="Search notes..." />
 

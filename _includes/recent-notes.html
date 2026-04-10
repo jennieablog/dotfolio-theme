@@ -2,9 +2,9 @@
 {% assign headings = site.headings | default: site.data.theme.headings | default: [] %}
 
 <!-- Recent Posts -->
-<section class="posts">
-  <h2 class="heading">{{ headings.posts.heading | default:headings.posts.heading }}</h2>
-  <p class="subheading">{{ headings.posts.subheading | default:headings.posts.subheading }}</p>
+<section class="notes">
+  <h2 class="heading">{{ headings.notes.heading | default:headings.notes.heading }}</h2>
+  <p class="subheading">{{ headings.notes.subheading | default:headings.notes.subheading }}</p>
 
   <ul>
     {% for post in posts limit:3 %}
@@ -23,7 +23,7 @@
   <!-- Notes Button -->
   <div class="more">
     <a href="/notes">
-      {{ headings.posts.more.label | default:headings.posts.more.label }}
+      {{ headings.notes.more.label | default:headings.notes.more.label }}
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
       </svg>

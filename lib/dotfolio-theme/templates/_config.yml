@@ -1,5 +1,5 @@
 title: Dotfolio
-description: A dotted notebook-style Jekyll theme for minimal and structured developer portfolios.
+description: A clean, dotted notebook-style Jekyll theme for developer portfolios, projects, and notes.
 
 hero:
   name: Brainy Smurf
@@ -14,8 +14,8 @@ headings:
     more:
       label: More on GitHub
       link: https://github.com/username
-  posts:
-    heading: Recent Notes
+  notes:
+    heading: Notes
     subheading: Smurfy notes, bookmarks, and handy smurfources.
     more:
       label: Older notes

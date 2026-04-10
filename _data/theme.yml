@@ -14,8 +14,8 @@ headings:
     more:
       label: More on GitHub
       link: https://github.com/username
-  posts:
-    heading: Recent Notes
+  notes:
+    heading: Notes
     subheading: Smurfy notes, bookmarks, and handy smurfources.
     more:
       label: Older notes
@@ -67,11 +67,11 @@ tools:
 projects:
   - title : Smurfboard
     description: A smurfy app to keep track of all village tasks, from mushroom gardening to potion brewing.
-    link: #
+    link: https://example.com
     image: assets/projects/project.png
   - title : SmurfLib
     description: A magical collection of scrolls, recipes, and Smurf lore, for every Smurf to learn and share.
-    link: #
+    link: https://example.com
     image: assets/projects/project.png
 
 socials:

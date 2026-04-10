@@ -2,13 +2,17 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "dotfolio-theme"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
+  spec.required_ruby_version = ">= 3.0"
   spec.authors       = ["Jennie Ron Ablog"]
   spec.email         = ["hello@jennieablog.dev"]
 
   spec.metadata["jekyll-theme"] = "true"
   spec.metadata["homepage_uri"] = "https://github.com/jennieablog/dotfolio-theme"
-  spec.metadata["source_code_uri"] = "https://github.com/jennieablog/dotfolio-theme"
+  spec.homepage = "https://github.com/jennieablog/dotfolio-theme"
+  spec.metadata = {
+    "source_code_uri" => "https://github.com/jennieablog/dotfolio-theme"
+  }
 
   spec.summary       = "A dotted notebook-style Jekyll theme for minimal and structured developer portfolios."
   spec.description   = "Dotfolio is a calm, dotted notebook-style Jekyll theme with a minimal, structured layout for showcasing projects and documenting ideas."
@@ -28,8 +32,8 @@ Gem::Specification.new do |spec|
     "bin/*"
   ])
 
-  spec.add_runtime_dependency "jekyll", ">= 4.0"
-  spec.add_runtime_dependency "jekyll-paginate-v2"
+  spec.add_runtime_dependency "jekyll", "~> 4.4"
+  spec.add_runtime_dependency "jekyll-paginate-v2", "~> 3.0"
 
   spec.require_paths = ["lib"]
   spec.executables << "dotfolio-theme"
