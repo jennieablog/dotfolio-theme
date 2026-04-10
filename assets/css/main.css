@@ -1443,10 +1443,6 @@ main.home .more svg {
   color: rgb(147 197 253 / var(--tw-text-opacity, 1));
 }
 
-.contents {
-  display: contents;
-}
-
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1465,4 +1461,8 @@ main.home .more svg {
 ::selection {
   background: rgb(65, 187, 73);
   color: white;
+}
+
+.hidden {
+  display: none;
 }
