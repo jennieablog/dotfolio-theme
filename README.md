@@ -1,50 +1,70 @@
-# dotfolio-theme
+# 📘 Dotfolio Theme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+<p>
+  <img src="https://img.shields.io/gem/v/dotfolio-theme.svg" alt="Gem Version">
+  <img src="https://img.shields.io/gem/dt/dotfolio-theme.svg" alt="Downloads">
+  <img src="https://img.shields.io/badge/Jekyll-4.4+-red.svg">
+  <img src="https://img.shields.io/badge/Ruby-%3E%3D%203.0-blue.svg">
+  <img src="https://img.shields.io/github/license/jennieablog/dotfolio-theme.svg" alt="License">
+</p>
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+### Dotfolio is a calm, dotted notebook-style Jekyll theme with a minimal, structured layout for showcasing projects and documenting ideas.
 
-TODO: Delete this and the text above, and describe your gem
+<img src="https://github.com/jennieablog/dotfolio-theme/blob/main/assets/images/dotfolio-theme.png?raw=true" alt="Dotfolio Screenshot" style="width: 100%; height: auto;">
 
-## Installation
+## ✨ Features
 
-Add this line to your Jekyll site's `Gemfile`:
+- 🧭 Minimal, structured homepage layout  
+- 📝 Notes system with **pagination + search**  
+- 🗂 Centralized configuration via a single YAML file  
+- ✍️ Consistent styling across Markdown and HTML  
+- 🌗 Dark / light mode toggle  
+- ⚡ One-command installer script  
+- 📦 Gem-based distribution  
+- 🪶 Lightweight and fast  
+- 🔓 Open source
+
+## 🎯 Use Cases
+
+Dotfolio is ideal for:
+
+- Developer portfolios  
+- Project showcases  
+- Personal blogs  
+- Digital gardens / notes  
+- Minimal documentation sites  
+
+## 🚀 Installation (Gem-based)
+
+Add the [dotfolio-theme](https://rubygems.org/gems/dotfolio-theme) and [jekyll-paginate-v2](https://rubygems.org/gems/jekyll-paginate-v2) to your `Gemfile`:
 
 ```ruby
 gem "dotfolio-theme"
+gem "jekyll-paginate-v2" # mandatory for pagination
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+Then install:
 
-```yaml
-theme: dotfolio-theme
+```ruby
+bundle install
 ```
 
-And then execute:
+Run the setup script to load theme settings and files:
 
-    $ bundle
+```ruby
+dotfolio-theme
+```
 
-Or install it yourself as:
+Finally, start your site:
 
-    $ gem install dotfolio-theme
+```ruby
+bundle exec jekyll serve
+```
 
-## Usage
+## 📄 License
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+MIT License © [Jennie Ron Ablog](https://jennieablog.dev)
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dotfolio-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `dotfolio-theme.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+## 💡 Acknowledgements
+- Built with ❤️ using [Jekyll](https://jekyllrb.com).
+- Styled with [Tailwind CSS](https://tailwindcss.com), compiled for production.
