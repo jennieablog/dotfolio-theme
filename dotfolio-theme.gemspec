@@ -3,7 +3,7 @@
 Gem::Specification.new do |spec|
   spec.name          = "dotfolio-theme"
   spec.version       = "0.1.1"
-  spec.required_ruby_version = ">= 3.0"
+  spec.required_ruby_version = ">= 2.6"
   spec.authors       = ["Jennie Ron Ablog"]
   spec.email         = ["hello@jennieablog.dev"]
 
@@ -32,8 +32,8 @@ Gem::Specification.new do |spec|
     "bin/*"
   ])
 
-  spec.add_runtime_dependency "jekyll", "~> 4.4"
-  spec.add_runtime_dependency "jekyll-paginate-v2", "~> 3.0"
+  spec.add_runtime_dependency "jekyll", ">= 3.9", "< 5.0"
+  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
 
   spec.require_paths = ["lib"]
   spec.executables << "dotfolio-theme"

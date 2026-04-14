@@ -90,12 +90,7 @@ socials:
 theme: dotfolio-theme
 
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: '/notes/:num/'
-  title: ':title - page :num'
-  sort_field: 'date'
-  sort_reverse: true
+paginate: 5
+paginate_path: "/notes/page:num/"
