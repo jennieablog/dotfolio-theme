@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "dotfolio-theme"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.required_ruby_version = ">= 2.6"
   spec.authors       = ["Jennie Ron Ablog"]
   spec.email         = ["hello@jennieablog.dev"]
